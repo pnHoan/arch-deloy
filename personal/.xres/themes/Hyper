@@ -1,0 +1,23 @@
+! Hyper Xresources palette
+*.foreground: #FFFFFF
+*.background: #000000
+*.color0:     #000000
+*.color8:     #808080
+*.color1:     #FE0100
+*.color9:     #FE0100
+*.color2:     #33FF00
+*.color10:    #33FF00
+*.color3:     #FEFF00
+*.color11:    #FEFF00
+*.color4:     #0066FF
+*.color12:    #0066FF
+*.color5:     #CC00FF
+*.color13:    #CC00FF
+*.color6:     #00FFFF
+*.color14:    #00FFFF
+*.color7:     #D0D0D0
+*.color15:    #FFFFFF
+
+! Additional settings
+*.selectionBackground: #F81CE5
+*.cursorColor:        #FFFFFF

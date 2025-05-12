@@ -1,0 +1,11 @@
+!st.font:         FiraCode Nerd Font Mono:style:medium:pixelsize=18
+!st.font: Iosevka Nerd Font:style=Regular:pixelsize=18
+st.font: IosevkaTerm Nerd Font Mono:style=Regular:pixelsize=20
+
+
+! window padding
+st.borderpx: 15
+
+! transparency
+st.alpha: 1.0
+

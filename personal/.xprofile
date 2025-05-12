@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# ---------------------------------------------------
+# Who to blame: Jv04hx
+# What for: Auto run some stuff since i don't use Xresources
+# ---------------------------------------------------
+
+
+
+# ===== Productivity Settings =====
+xset r rate 200 50 &
+
+# --- tmux ---
+if ! tmux has-session -t owl 2>/dev/null; then
+    tmux new-session -d -s owl
+fi
+
+# ===== Compositor =====
+case "$XDG_CURRENT_DESKTOP" in
+    XFCE|GNOME|KDE|LXQt)
+        echo "Skipping picom, compositor likely managed by desktop environment." ;;
+    *)
+        picom &
+        ;;
+esac
+
+# ===== Tray icons =====
+volumeicon &
+
+# ===== Vietnamese support =====
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+ibus-daemon -drx &
+
+# ===== Xresources things =====
+xrdb merge ~/.Xresources
+# xrdb merge ~/.config/suckless/st/xresources
+# xrdb merge ~/.config/suckless/st/themes/Tokyodark
