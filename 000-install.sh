@@ -16,8 +16,8 @@ sh 202-install_recommended.sh
 sh 300-enable_service.sh
 sh 400-kde.sh
 sh 401-zsh.sh
-sh 402-tumx.sh
-sh 403-paur.sh
+sh 402-tmux.sh
+sh 403-paru.sh
 
 
 
