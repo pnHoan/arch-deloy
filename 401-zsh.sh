@@ -47,6 +47,11 @@ autoload -Uz compinit && compinit
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 EOF
 
+
+sudo chsh -s $(which zsh) $USER
+ehcho "Changed default shell to zsh for user $USER"
+
+
 echo "Installation complete. Please start a new zsh session to apply the changes."
 echo "Run 'p10k configure' to set up your powerlevel10k theme if you haven't already."
 

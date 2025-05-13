@@ -10,7 +10,6 @@ echo
 
 
 sudo systemctl enable avahi-daemon.service
-sudo systemctl enable ntpd.service
 
 # Enable and start Bluetooth service
 sudo systemctl enable bluetooth.service 

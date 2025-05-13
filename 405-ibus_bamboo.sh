@@ -1,13 +1,16 @@
+#!/bin/bash
+
+
 echo
 tput setaf 2
 echo "########################################################################"
-echo "###################  software ################################"
+echo "################### Install Vietnamese keyboard  #######################"
 echo "########################################################################"
 tput sgr0
 echo
 
-########### install AUR packages #################################################################################
 packages=(
+    ibus-bamboo
 )
 
 # Check if the package array is empty
@@ -40,18 +43,4 @@ for pkg in "${packages[@]}"; do
       echo "$pkg" >> aur_to_install_later.txt
     fi
   fi
-done
-
-############# install pacman packages #################################################################################
-packages=(
-)
-
-# Install packages
-for pkg in "${packages[@]}"; do
-    if pacman -Qi "$pkg" &>/dev/null; then
-        echo "✔ $pkg is already installed."
-    else
-        echo "➤ Installing $pkg..."
-        sudo pacman -S --noconfirm --needed "$pkg"
-    fi
 done

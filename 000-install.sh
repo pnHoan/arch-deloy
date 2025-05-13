@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# TODO: Automate run the scripts in order with out modyfying this scripts. Maybe this script should be use to disable the scripts that are not needed for the user.
 echo
 tput setaf 2
 echo "########################################################################"
