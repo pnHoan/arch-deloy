@@ -31,6 +31,7 @@ python-pyqt6
 aspell
 tmux
 zsh
+ttf-iosevkaterm-nerd
 )
 
 # Install packages

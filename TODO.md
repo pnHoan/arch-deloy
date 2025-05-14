@@ -1,3 +1,3 @@
 # TODO
 
-- Nvim
+- St 
