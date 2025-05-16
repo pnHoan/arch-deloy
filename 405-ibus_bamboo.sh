@@ -1,5 +1,9 @@
 #!/bin/bash
 
+debug=true
+if [ "$debug" = true ]; then
+    read -n 1 -s -r -p "Press any key to continue..."
+fi
 
 echo
 tput setaf 2

@@ -8,43 +8,18 @@
 #
 ##################################################################################################################
 
-debug=true
-if [ "$debug" = true ]; then
-    read -n 1 -s -r -p "Press any key to continue..."
-fi
-
 echo
 tput setaf 2
 echo "########################################################################"
-echo "###################  Install Chadwm  ###################################"
+echo "###################  Install st  #######################################"
 echo "########################################################################"
 tput sgr0
 echo
 
-packages=(
-	dash
-    imlib2
-    xorg-xsetroot
-    acpi
-    rofi
-    feh
-    picom
-)
-
-# Install packages
-for pkg in "${packages[@]}"; do
-    if pacman -Qi "$pkg" &>/dev/null; then
-        echo "✔ $pkg is already installed."
-    else
-        echo "➤ Installing $pkg..."
-        sudo pacman -S --noconfirm --needed "$pkg"
-    fi
-done
-
-if [ ! -d "$HOME/.config/arco-chadwm" ]; then
-    cp -r ./etc/skel/.config/arco-chadwm "$HOME/.config/"
-    cd  "$HOME/.config/arco-chadwm/chadwm" 
+if [ ! -d "$HOME/.config/suckless" ]; then
+    cp -r ./suckless "$HOME/.config/"
+    cd  "$HOME/.config/suckless/st" 
     sudo make clean install
 fi
 
-echo "ChadWM is installed"
+echo "St terminal is installed"

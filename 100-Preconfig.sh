@@ -1,5 +1,10 @@
 #!/bin/bash
 
+debug=true
+if [ "$debug" = true ]; then
+    read -n 1 -s -r -p "Press any key to continue..."
+fi
+
 echo
 tput setaf 2
 echo "########################################################################"
@@ -21,4 +26,16 @@ mkdir -p ~/backup
 
 # Copy the personal config files to the home directory
 path=$(pwd)
-cp -r $path/personal/. ~/
+cp -r $path/personal/. "$HOME/"
+
+# Create the .Xresources file
+cat << EOF > "$HOME/.Xresources"
+! SOURCE PROGRAM SPECIFIC FILES !
+#include "$HOME/.xres/st"
+
+
+! SOURCE TERMINAL COLORS !
+!#include "$HOME/.xres/themes/Tokyodark"
+!#include "$HOME/.xres/themes/Dracula"
+#include "$HOME/.xres/themes/Hyper"
+EOF

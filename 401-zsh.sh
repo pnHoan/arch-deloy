@@ -1,5 +1,10 @@
 #!/bin/bash
 
+debug=true
+if [ "$debug" = true ]; then
+    read -n 1 -s -r -p "Press any key to continue..."
+fi
+
 echo
 tput setaf 2
 echo "########################################################################"
@@ -13,20 +18,14 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 
 
 # Backup existing .zshrc if it exists
-if [ -f ~/.zshrc ]; then
-    mv ~/.zshrc ~/.zshrc.bak
-    echo "Existing .zshrc backed up to .zshrc.bak"
-fi
 
 if [ -f ./personal/.p10k.zsh ]; then
     cp ./personal/.p10k.zsh ~/.p10k.zsh 
     echo "Copied .p10k.zsh to home directory"
 fi
 
-# Create new .zshrc
-cat << 'EOF' > ~/.zshrc
-# Load zinit
-source ~/.zinit/bin/zinit.zsh
+# Apply new .zshrc
+cat << 'EOF' >> ~/.zshrc
 
 # Load plugins
 zinit light zsh-users/zsh-completions

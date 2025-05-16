@@ -1,9 +1,14 @@
 #!/bin/bash
 
+debug=true
+if [ "$debug" = true ]; then
+    read -n 1 -s -r -p "Press any key to continue..."
+fi
+
 echo
 tput setaf 2
 echo "########################################################################"
-echo "###################  software ################################"
+echo "###################  apply chadwm to display manager ###################"
 echo "########################################################################"
 tput sgr0
 echo
@@ -44,6 +49,6 @@ for pkg in "${aur_packages[@]}"; do
   fi
 done
 
-sudo cp ./usr.bin/exec-chadwm /usr/bin/exec-chadwm
+sudo cp ./usr/bin/exec-chadwm /usr/bin/exec-chadwm
 sudo chmod +x /usr/bin/exec-chadwm
-sudo cp  ./usr/share/applications/arco-chadwm.desktop /usr/share/applications/arco-chadwm.desktop
+sudo cp  ./usr/share/applications/arco-chadwm.desktop /usr/share/xsessions/arco-chadwm.desktop

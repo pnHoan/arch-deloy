@@ -21,6 +21,8 @@ sh 404-nvim.sh
 #sh 405-ibus_bamboo.sh
 sh 500-chadwm.sh
 sh 501-chadwm_post_config.sh
+sh 502-st.sh
+sh 600-clean_up.sh
 
 
 

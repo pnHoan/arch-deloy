@@ -8,13 +8,15 @@ fi
 echo
 tput setaf 2
 echo "########################################################################"
-echo "###################  Install paru ######################################"
+echo "###################  software ################################"
 echo "########################################################################"
 tput sgr0
 echo
 
-
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
+if [ -f aur_to_install_later.txt ]; then
+    echo "The following AUR packages were not installed:"
+    cat aur_to_install_later.txt
+    echo "Please install them manually."
+else
+    echo "No AUR packages to install later."
+fi

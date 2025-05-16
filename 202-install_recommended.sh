@@ -32,6 +32,7 @@ aspell
 tmux
 zsh
 ttf-iosevkaterm-nerd
+reflector
 )
 
 # Install packages

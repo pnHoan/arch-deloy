@@ -2,10 +2,6 @@
 # export PAGER='most'
 export PAGER='less'
 
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
 setopt GLOB_DOTS
 #share commands between terminal instances or not
 unsetopt SHARE_HISTORY
