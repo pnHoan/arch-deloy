@@ -13,16 +13,14 @@ echo "########################################################################"
 tput sgr0
 echo
 
-# Install zinit
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-
-
 # Backup existing .zshrc if it exists
-
 if [ -f ./personal/.p10k.zsh ]; then
     cp ./personal/.p10k.zsh ~/.p10k.zsh 
     echo "Copied .p10k.zsh to home directory"
 fi
+
+# Install zinit
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 # Apply new .zshrc
 cat << 'EOF' >> ~/.zshrc
