@@ -27,8 +27,9 @@ cp -r ./suckless "$HOME/.config/"
 cd  "$HOME/.config/suckless/st" 
 sudo make clean install
 
-if [ st -v ]; then
-   echo "St terminal is installed"
+if command -v st >/dev/null 2>&1; then
+    echo "st is installed!"
 else
-   echo "St terminal is not installed"
+    echo "st is not installed."
+    exit 1
 fi
