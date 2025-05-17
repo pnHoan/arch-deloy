@@ -32,6 +32,7 @@ aspell
 tmux
 zsh
 ttf-iosevkaterm-nerd
+ttf-jetbrains-mono-nerd
 reflector
 )
 
