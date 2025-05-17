@@ -16,10 +16,19 @@ echo "########################################################################"
 tput sgr0
 echo
 
-if [ ! -d "$HOME/.config/suckless" ]; then
-    cp -r ./suckless "$HOME/.config/"
-    cd  "$HOME/.config/suckless/st" 
-    sudo make clean install
+sudo pacman -S --noconfirm --needed gd
+
+if [-d "$HOME/.config/suckless/st"]; then
+   mv "$HOME/.config/suckless/st" "$HOME/.config/suckless/st.old"
+   echo "Backup of st config created" 
 fi
 
-echo "St terminal is installed"
+cp -r ./suckless "$HOME/.config/" 
+cd  "$HOME/.config/suckless/st" 
+sudo make clean install
+
+if [ st -v ]; then
+   echo "St terminal is installed"
+else
+   echo "St terminal is not installed"
+fi
