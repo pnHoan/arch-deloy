@@ -1,1 +1,6 @@
 ./suckless/st/backup/*
+./suckless/st/config.h
+./suckless/st/st
+./suckless/st/*.o
+./suckless/st/*.rej
+./suckless/st/*.orig
