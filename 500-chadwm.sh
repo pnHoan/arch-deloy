@@ -42,7 +42,7 @@ for pkg in "${packages[@]}"; do
 done
 
 if [ ! -d "$HOME/.config/arco-chadwm" ]; then
-    cp -r ./etc/skel/.config/arco-chadwm "$HOME/.config/"
+    cp -r ./config/arco-chadwm "$HOME/.config/"
     cd  "$HOME/.config/arco-chadwm/chadwm" 
     sudo make clean install
 fi
