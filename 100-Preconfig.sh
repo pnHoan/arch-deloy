@@ -20,6 +20,7 @@ read -n 1 -s -r -p "Press any key to continue..."
 
 # Disable IPv6 on all interfaces
 sh 900-disable_ipv6.sh
+sh 901-update_mirror.sh
 
 # Make a backup folder
 mkdir -p ~/backup
