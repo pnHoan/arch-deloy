@@ -88,3 +88,4 @@ sudo pacman -S --noconfirm --needed sof-firmware         # Firmware for Intel au
 sudo pacman -S --noconfirm --needed power-profiles-daemon # Manages power profiles (e.g., battery optimization)
 sudo pacman -S --noconfirm --needed upower               # Monitors battery status
 sudo pacman -S --noconfirm --needed intel-ucode          # Microcode updates for Intel CPU
+sudo pacman -S --noconfirm --needed tlp                  # Power management tool

@@ -16,6 +16,6 @@ echo
 sudo cp ./usr/bin/exec-chadwm /usr/bin/exec-chadwm
 sudo chmod +x /usr/bin/exec-chadwm
 sudo cp  ./usr/share/xsessions/arco-chadwm.desktop /usr/share/xsessions/arco-chadwm.desktop
-sudo chmod +x $HOME/.config/arco-chadwm/scripts/run.sh
+sudo chmod +x $HOME/.config/arco-chadwm/scripts/*.sh
 
 echo "ChadWM is applied to display manager"

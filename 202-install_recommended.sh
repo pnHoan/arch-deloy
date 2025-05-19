@@ -34,6 +34,7 @@ zsh
 ttf-iosevkaterm-nerd
 ttf-jetbrains-mono-nerd
 reflector
+flameshot
 )
 
 # Install packages
