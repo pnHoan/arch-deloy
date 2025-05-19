@@ -238,10 +238,10 @@ struct Systray {
   Client *icons;
 };
 
-typedef struct {
-	const char** command;
-	const char* name;
-} Launcher;
+// typedef struct {
+// 	const char** command;
+// 	const char* name;
+// } Launcher;
 
 /* function declarations */
 static void applyrules(Client *c);
@@ -1534,29 +1534,29 @@ w = TEXTW(m->ltsymbol);
 // drw_setscheme(drw, scheme[SchemeLayout]);
 x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
-for (i = 0; i < LENGTH(launchers); i++) {
-    if (launchers[i].command == firefox) {
-        drw_setscheme(drw, scheme[SchemeLayoutFF]);
-    } else if (launchers[i].command == brave) {
-        drw_setscheme(drw, scheme[SchemeLayoutEW]);
-    } else if (launchers[i].command == opera) {
-        drw_setscheme(drw, scheme[SchemeLayoutOP]);
-    } else if (launchers[i].command == discord) {
-        drw_setscheme(drw, scheme[SchemeLayoutDS]);
-    } else if (launchers[i].command == telegram) {
-        drw_setscheme(drw, scheme[SchemeLayoutTG]);
-    } else if (launchers[i].command == mintstick) {
-        drw_setscheme(drw, scheme[SchemeLayoutMS]);
-    } else if (launchers[i].command == pavucontrol) {
-        drw_setscheme(drw, scheme[SchemeLayoutPC]);
-    } else if (launchers[i].command == vivaldi) {
-        drw_setscheme(drw, scheme[SchemeLayoutVV]);
-    }
+// for (i = 0; i < LENGTH(launchers); i++) {
+//     if (launchers[i].command == firefox) {
+//         drw_setscheme(drw, scheme[SchemeLayoutFF]);
+//     } else if (launchers[i].command == brave) {
+//         drw_setscheme(drw, scheme[SchemeLayoutEW]);
+//     } else if (launchers[i].command == opera) {
+//         drw_setscheme(drw, scheme[SchemeLayoutOP]);
+//     } else if (launchers[i].command == discord) {
+//         drw_setscheme(drw, scheme[SchemeLayoutDS]);
+//     } else if (launchers[i].command == telegram) {
+//         drw_setscheme(drw, scheme[SchemeLayoutTG]);
+//     } else if (launchers[i].command == mintstick) {
+//         drw_setscheme(drw, scheme[SchemeLayoutMS]);
+//     } else if (launchers[i].command == pavucontrol) {
+//         drw_setscheme(drw, scheme[SchemeLayoutPC]);
+//     } else if (launchers[i].command == vivaldi) {
+//         drw_setscheme(drw, scheme[SchemeLayoutVV]);
+//     }
 
-    w = TEXTW(launchers[i].name);
-    drw_text(drw, x, 0, w, bh, lrpad / 2, launchers[i].name, urg & 1 << i);
-    x += w;
-}
+//     w = TEXTW(launchers[i].name);
+//     drw_text(drw, x, 0, w, bh, lrpad / 2, launchers[i].name, urg & 1 << i);
+//     x += w;
+// }
 
   w = floatbar?mw + m->gappov * 2 - sw - stw - x:mw - sw - stw - x;
   if (w > bh_n) {
