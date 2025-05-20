@@ -14,7 +14,6 @@ sudo pacman -S --noconfirm --needed xorg-xinit           # Initializes X session
 sudo pacman -S --noconfirm --needed xorg-xrandr          # Manages screen resolution and rotation
 sudo pacman -S --noconfirm --needed xf86-input-libinput  # Input driver for touchpad and keyboard
 sudo pacman -S --noconfirm --needed xorg-xset            # Adjusts X server settings (e.g., screen blanking) # NEW
-sudo pacman -S --noconfirm --needed xorg-xbacklight      # Controls screen brightness # NEW
  
 # Networking: Tools for Wi-Fi, Ethernet, and network services
 sudo pacman -S --noconfirm --needed networkmanager       # Manages Wi-Fi and Ethernet connections
@@ -23,7 +22,6 @@ sudo pacman -S --noconfirm --needed wpa_supplicant       # Handles Wi-Fi authent
 sudo pacman -S --noconfirm --needed dnsutils             # Provides DNS tools (dig, nslookup)
 sudo pacman -S --noconfirm --needed ethtool              # Configures Ethernet interfaces
 sudo pacman -S --noconfirm --needed iwd                  # Modern Wi-Fi backend (optional with NetworkManager)
-sudo pacman -S --noconfirm --needed openssh              # SSH client and server for remote access
 sudo pacman -S --noconfirm --needed network-manager-applet # System tray applet for NetworkManager # NEW
 sudo pacman -S --noconfirm --needed avahi                # mDNS/DNS-SD for network discovery # NEW
 
@@ -34,20 +32,17 @@ sudo pacman -S --noconfirm --needed yay                  # AUR helper for commun
 sudo pacman -S --noconfirm --needed archlinux-keyring    # Keyring for package signing # NEW
  
 # System Utilities: General system functionality and user tools
-sudo pacman -S --noconfirm --needed accountsservice      # Manages user accounts for desktop environments
 sudo pacman -S --noconfirm --needed bash-completion      # Enhances terminal command completion
 sudo pacman -S --noconfirm --needed bluez                # Bluetooth protocol stack
 sudo pacman -S --noconfirm --needed bluez-utils          # Tools for Bluetooth configuration
-sudo pacman -S --noconfirm --needed plocate              # Fast file search utility
 sudo pacman -S --noconfirm --needed xdg-user-dirs        # Creates standard user directories (e.g., Documents)
 sudo pacman -S --noconfirm --needed xdg-utils            # Desktop integration (e.g., opening URLs)
-sudo pacman -S --noconfirm --needed haveged              # Generates entropy for secure boot
 sudo pacman -S --noconfirm --needed smartmontools        # Monitors SSD health
 sudo pacman -S --noconfirm --needed unrar                # Extracts RAR archives
 sudo pacman -S --noconfirm --needed unzip                # Extracts ZIP archives
 sudo pacman -S --noconfirm --needed xz                   # Handles XZ compression (used by Arch packages)
 sudo pacman -S --noconfirm --needed htop                 # Interactive process viewer # NEW
-sudo pacman -S --noconfirm --needed fastfetch             # Displays system information # NEW
+sudo pacman -S --noconfirm --needed fastfetch            # Displays system information # NEW
 sudo pacman -S --noconfirm --needed gvfs                 # Virtual filesystem for file managers # NEW
 
 # Fonts: Font rendering and display
@@ -85,6 +80,4 @@ sudo pacman -S --noconfirm --needed hwdetect             # Detects hardware duri
 sudo pacman -S --noconfirm --needed lsscsi               # Lists SCSI devices
 sudo pacman -S --noconfirm --needed sg3_utils            # Manages SCSI devices
 sudo pacman -S --noconfirm --needed sof-firmware         # Firmware for Intel audio DSP
-sudo pacman -S --noconfirm --needed power-profiles-daemon # Manages power profiles (e.g., battery optimization)
-sudo pacman -S --noconfirm --needed upower               # Monitors battery status
 sudo pacman -S --noconfirm --needed intel-ucode          # Microcode updates for Intel CPU
